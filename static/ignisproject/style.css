@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  padding: 0 25px;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f6f6;
+  border-bottom: 1px solid #8a8a8a;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-left {
+  display: flex;
+  gap: 30px;
+}
+
+.logo {
+  cursor: pointer;
+  color: #f14040;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.nav-search {
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-search input {
+  height: 30px;
+  width: 300px;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.nav-right {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-right li {
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.profile {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.events {
+  width: 100%;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.events h1 {
+  width: 700px;
+  margin-bottom: 20px;
+}
+
+.details {
+  width: 700px;
+  height: 130px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.details img {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.event-detail {
+  width: 50%;
+  font-size: 0.8rem;
+}
+
+.user-action {
+  height: 100%;
+}
+
+.user-action i {
+  cursor: pointer;
+  position: relative;
+  top: 100px;
+}
+
+.position-set {
+  right: 30px;
+}
+
+form {
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #dedede;
+  box-shadow: 0 0 5px #8a8a8a;
+}
+
+form h1 {
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 350px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  padding: 0 20px;
+  border: transparent;
+}
+
+.button {
+  cursor: pointer;
+  color: #fff;
+  width: 350px;
+  height: 40px;
+  margin: 15px 0 25px 0;
+  border-radius: 30px;
+  border: transparent;
+  font-size: 1.1rem;
+  background-color: #565656;
+}
+
+.eventimage {
+    padding: 0;
+}
+
+.eventimage::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.eventimage::before {
+  content: "Choose";
+  display: inline-block;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 10px 40px;
+  cursor: pointer;
+}

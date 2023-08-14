@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+Login  | Ignis
+{% endblock %}
+
+{% block content %}
+
+
+    <form action="" class="form">
+        <h1>Login</h1>
+        <div class="email">
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="password">
+            <input type="password" name="password" id="password" placeholder="Enter password">
+        </div>
+        <button class="button">Login</button>
+        <p>Don't have account? <a href="{% url 'register_page' %}">Register</a> | <a href="{% url 'home' %}">Home</a></p>
+    </form>
+
+    {% endblock %}

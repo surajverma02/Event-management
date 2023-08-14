@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+Register event | Ignis
+{% endblock %}
+
+{% block content %}
+
+
+    <form action="{% url 'register_page' %}" method="post" class="form">
+        {% csrf_token %}
+        <h1>Register</h1>
+        <div class="name">
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+        </div>
+        <div class="email">
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="address">
+            <input type="text" name="address" id="address" placeholder="Enter your address">
+        </div>
+        <div class="password">
+            <input type="password" name="password" id="password" placeholder="Enter password">
+        </div>
+        <button class="button">Register</button>
+        <p>Already have account? <a href="{% url 'login_page' %}">Login</a> | <a href="{% url 'home' %}">Home</a></p>
+    </form>
+
+
+    {% endblock %}

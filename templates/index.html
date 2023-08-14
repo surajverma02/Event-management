@@ -1,0 +1,64 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+Home | Ignis
+{% endblock %}
+
+{% block nav %}
+
+    <div class="nav">
+        <div class="nav-left">
+            <div class="logo">eventbrite</div>
+            <div class="nav-search">
+                <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000;"></i>
+                <input type="text" placeholder="Search for events">
+            </div>
+        </div>
+        <ul class="nav-right">
+            <li>Browse Events</li>
+            <li><a href="{% url 'add_event' %}">Host an event &nbsp;<i class="fa-solid fa-angle-down fa-lg" style="color: #000;"></i></a></li>
+            <li>Help &nbsp;<i class="fa-solid fa-angle-down fa-lg" style="color: #000;"></i></li>
+            <li>
+                <div class="profile">
+                    <i class="fa-solid fa-user fa-xl" style="color: #000;"></i>
+                    <!-- <img src="suraj.jpg" alt=""> -->
+                    <p><a href="{% url 'login_page' %}">login</a></p>
+                    <i class="fa-solid fa-angle-down fa-lg" style="color: #000;"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    {% endblock %}
+
+{% block content %}
+
+
+    <div class="events">
+        <h1>Likes</h1>
+
+        {% for e in events %}
+
+        <div class="details">
+            <img src="media/{{e.image}}" alt="">
+            <div class="event-detail">
+                <h2>{{e.eventname}}</h2>
+                <p>{{e.event_date}} IST</p>
+                <p>Start at ${{e.price_started}}</p>
+            </div>
+            <div class="user-action">                
+                <i class="fa-solid fa-download fa-lg position-set" style="color: #000;"></i>
+                {% if e.is_like %}
+                <a href="{% url 'updated' e.id %}"><i class="fa-solid fa-heart fa-lg" style="color: #d06464;"></i></a>
+                {% else %}
+                <a href="{% url 'updated' e.id %}"><i class="fa-solid fa-heart fa-lg" style="color: #b0b0b0;"></i></a>
+                {% endif %}
+                <!-- d06464 -->
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+    
+    
+    {% endblock %}
